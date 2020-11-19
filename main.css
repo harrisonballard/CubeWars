@@ -1,0 +1,43 @@
+#canvas {
+    border-style: groove;
+    border-width: 15px;
+    border-color: slategrey;
+    background-image: url("sky.jpg");
+    background-size: cover;
+    display: block;
+    margin-bottom: auto;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+
+
+
+body {
+    font-family: sans-serif;
+    text-align: center;
+    background-image: url("space-back.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    color: white;
+}
+
+header {
+    color: chartreuse;
+}
+
+button {
+    background-color: chartreuse;
+    border-width: 10px;
+    border-style: groove;
+}
+
+p {
+    font-style: italic;
+}
+
+main {
+    text-align: center;
+}
