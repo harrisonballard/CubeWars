@@ -40,7 +40,7 @@ function getContext() {
 
 //makes new badGuys at set interval; increase number in if statement to increase difficulty
 function spawnBadGuy() {
-    if (Math.random() < 0.005) {
+    if (Math.random() < 0.008) {
     let bg = makeRectangle(randomInteger(30, 470), 40, 30, 30,RED,BADGUY);
     objects.push(bg);
     }
@@ -81,7 +81,7 @@ if (event.key === "ArrowRight") {
   } else if (event.key === " ") {
     let player = objects.find((o) => o.charType === "goodguy")
     let blaster = makeRectangle(player.x + 12.5, player.y - 2, 5, 5, GREEN, BLASTER);
-    objects.push(blaster);        
+    objects.push(blaster);
 }
 }
 
