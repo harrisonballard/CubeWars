@@ -11,6 +11,7 @@ const BLASTER = "blaster";
 let objects = [];
 var playerDX = 0;
 let score = 0;
+let highScore = 0;
 
 //TODO - UPDATE TO HAVE ARGUMENT SELECT WHICH IMAGE TO DRAW
 //this constructs the objects, which have type player, bad guy, or blaster, spec'd by charType
@@ -140,8 +141,12 @@ function handleGoodGuyBadGuyCollision() {
 function handleBlasterBadGuyCollision(object1, object2) {
     removeFromArray(objects, object1);
     removeFromArray(objects, object2);
-    document.getElementById("score").innerHTML = `Score = ${score+=10}`;
-
+    score += 10;
+    document.getElementById("score").innerHTML = `Score = ${score}`;
+    if (score > highScore) {
+        highScore += 10;
+        document.getElementById("highScore").innerHTML = `High Score = ${highScore}`
+    }
 }
 
 
@@ -205,6 +210,7 @@ function tearDown() {
     document.querySelector("#start-button").removeAttribute("disabled");
     objects.splice(0);
     score = 0;
+    highScore = highScore;
     document.getElementById("score").innerHTML = `Score = 0`;
     clearScreen()
 }
