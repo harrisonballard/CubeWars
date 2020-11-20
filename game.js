@@ -205,6 +205,7 @@ function tearDown() {
     document.querySelector("#start-button").removeAttribute("disabled");
     objects.splice(0);
     score = 0;
+    document.getElementById("score").innerHTML = `Score = 0`;
     clearScreen()
 }
 
